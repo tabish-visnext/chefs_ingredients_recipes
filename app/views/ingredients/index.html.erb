@@ -1,0 +1,19 @@
+<h1 align="center">all the ingredients here</h1>
+<%= will_paginate @i%>
+<% @i.each do |i|%>
+    <table class="table">
+       <tr>
+          
+          <td><%= link_to i.name.capitalize, ingredient_path(i)%></td>
+          <td><%= pluralize(i.recipes.count, "irecipes")%></td>
+          <td><%= link_to "edit ingredient", ingredient_path(i)%></td>
+          
+        
+         
+       </tr>
+
+    </table>
+    
+    
+<% end %>  
+<%= will_paginate @i%>

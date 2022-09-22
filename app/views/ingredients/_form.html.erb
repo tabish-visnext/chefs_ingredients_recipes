@@ -1,0 +1,29 @@
+
+
+
+
+<%= form_for(@i, :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    
+    <div class="form-group col-md-8">
+      <p>
+         <%= f.label :description%> <br>
+         <%= f.text_field :description%>
+      </p>
+
+      <p>
+         <%= f.label :email%> <br>
+         <%= f.email_field :email%>
+         
+      </p>
+
+      
+     
+
+      <p>
+           <%= f.submit(@i.new_record? ? "Add Ingredient" : "Update Ingredient") %>
+       </p>
+
+       
+      
+    </div>
+

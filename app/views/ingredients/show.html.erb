@@ -1,0 +1,16 @@
+<h1 align="center"> <%= @i.name%></h1>
+
+<table class="table">
+       
+
+</table>
+
+<% if @i.recipes.count != 0%>
+  <h2 align="center">Resipes containing <%= @i.name%></h2>
+  <%= will_paginate @ingredient_recipes%>
+    <%= render 'recipes/recipe', obj: @ingredient_recipes%>
+  <%= will_paginate @ingredient_recipes%>
+
+<%else%>
+<h2 align="center">No recipes yet</h2>
+<%end%>

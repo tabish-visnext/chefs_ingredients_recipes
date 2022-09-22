@@ -1,0 +1,46 @@
+
+
+
+
+<%= form_for(@c, :html => {class: "form-horizontal", role: "form"}) do |f|%>
+    
+    <div class="form-group col-md-8">
+      <p>
+         <%= f.label :name%> <br>
+         <%= f.text_field :name%>
+      </p>
+
+      <p>
+         <%= f.label :email%> <br>
+         <%= f.email_field :email%>
+         
+      </p>
+
+      <p>
+         <%= f.label :password, placeholder="password"%> <br>
+         <%= f.password_field :password%>
+         
+      </p>
+
+      <p>
+         <%= f.label :password_confirmation%> <br>
+         <%= f.password_field :password_confirmation%>
+         
+      </p>
+
+
+      <p>
+           <%= f.submit "Create Account"%>
+       </p>
+
+       <p>
+           <%= link_to "cancel request and go back to listing page", recipes_path%>
+       </p>
+     
+      
+    </div>
+
+
+    
+
+<% end %>

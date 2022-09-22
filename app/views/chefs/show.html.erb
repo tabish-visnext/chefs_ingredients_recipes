@@ -1,0 +1,16 @@
+<h1 align="center">Chef <%= @c.name%>'s profile</h1>
+
+<table class="table">
+       <tr>
+          <td align="center"><%= gravatar_for @c%></td>
+         
+       </tr>
+
+</table>
+
+<% if @c.recipes.count != 0%>
+  <h2 align="center">Chef <%= @c.name%>'s recipes</h2>
+  <%= render 'recipes/recipe', obj: @c.recipes%>
+<%else%>
+<h2 align="center">No ecipes yet</h2>
+<%end%>

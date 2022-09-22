@@ -1,0 +1,19 @@
+
+<h1 align="center">all the chefs here</h1>
+<%= will_paginate @c%>
+<% @c.each do |c|%>
+    <table class="table">
+       <tr>
+          <td><%= link_to gravatar_for(c), chef_path(c)%></td>
+          <td><%= link_to c.name.capitalize, chef_path(c)%></td>
+          <td><%= pluralize(c.recipes.count, "recipe")%></td>
+          
+         
+         
+       </tr>
+
+    </table>
+    
+    
+<% end %>  
+<%= will_paginate @c%>
